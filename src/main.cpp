@@ -68,12 +68,12 @@ void IRAM_ATTR onTimer()
 //*****************************************************************************
 // Tasks
 
-// Attende che venga liberato il semaforo dalla ISR poi stampa il valore acquisito dall'ADC
+// Attende la notifica dalla ISR poi stampa il valore acquisito dall'ADC
 void printValues(void *parameters) {
   // valore in Volt del dato acquisito
   float volt;
 
-  // ciclo infinito, attente che venga liberato il semaforo poi stampa il valore
+  // ciclo infinito, attente la notifica dalla ISR poi stampa il valore
   while (1) {
     ulTaskNotifyTake( pdTRUE, portMAX_DELAY );
 
