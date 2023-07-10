@@ -27,8 +27,6 @@ static const int pinAdc = GPIO_NUM_34;
 static const uint16_t timer_divider = 80;
 // costante di tempo del timer hardware (100ms)
 static const uint64_t timer_max_count = 100000;
-// tempo di ciclo del task
-static const TickType_t task_delay = pdMS_TO_TICKS(2000);
 
 // handler del timer hardware
 static hw_timer_t *timer = NULL;
